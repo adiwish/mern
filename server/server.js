@@ -1,9 +1,8 @@
 const express = require("express");
 const app = express();
+const router=require("./router/auth-router");
 
-app.get("/",(req,res)=>{
-    res.send("This is landing page");
-});
+app.use("/api/auth/",router);
 
 const port=5000;
 app.listen(port,()=>{
